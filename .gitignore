@@ -1,3 +1,6 @@
 # created by virtualenv automatically
 .venv
 meme_concepts.txt
+.idea
+__pycache__
+.gitignore
