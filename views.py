@@ -23,7 +23,3 @@ class Text:
         surface.blit(self.rendered, self.rect)
 
 # экземпляр
-start_text = Text("Нажми Esc для выхода", 10, 10, 30, (255, 255, 255), "Comic Sans MS")
-
-def show_all_texts():
-    start_text.draw(screen)

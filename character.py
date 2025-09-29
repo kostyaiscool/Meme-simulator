@@ -4,7 +4,7 @@ from config import width, height
 
 class Character:
     def __init__(self, image, x, y, scale, speed, max_HP, HP, max_dmg, ability):
-        self.formula = width * (scale / 1000)
+        self.formula = width * (scale / 2000)
         self.skin = pg.image.load(image)
         self.skin = pg.transform.scale(self.skin, (self.formula, self.formula))
         self.rect = self.skin.get_rect()

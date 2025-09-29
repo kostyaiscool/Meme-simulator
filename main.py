@@ -1,7 +1,8 @@
 import pygame as pg
 from character import Character
 from config import width, height, screen
-from views import show_all_texts
+from text import show_all_texts
+
 clock = pg.time.Clock()
 
 
@@ -31,5 +32,5 @@ def run():
                     game = False
 
 
-squar = Character('Sources/squar.png', width / 2, height / 2, 20, 3, 30, 30, 5, "None")
+squar = Character('Sources/squar.png', width / 2, height / 2, 30, 3, 30, 30, 5, "None")
 run()

@@ -9,8 +9,8 @@ print("Ширина:", width, "Высота:", height)
 screen = pg.display.set_mode((width, height), pg.RESIZABLE)
 lang_id = ctypes.windll.kernel32.GetUserDefaultUILanguage()
 lang_code = locale.windows_locale.get(lang_id)
-used_lang = lang_code.split("_")
-print(used_lang[0])
+used_lang = lang_code.split("_")[0]
+print(used_lang)
 pg.display.set_caption("Мемный симулятор")
 pg.display.set_icon(screen)
 # cube_width  = (25 / 480) * screen_width
