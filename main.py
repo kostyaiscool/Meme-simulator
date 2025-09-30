@@ -2,14 +2,12 @@ import pygame as pg
 from character import Character
 from config import width, height, screen
 from text import show_all_texts
-
 clock = pg.time.Clock()
 
 
 def run():
     game = True
     color = (0, 0, 0)
-
     while game:
         screen.fill(color)
         squar.show_char(screen)
