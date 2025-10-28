@@ -1,17 +1,16 @@
 import pygame as pg
-from config import width, height
+from config import width, height, width_scale
 
 
 class Character:
     def __init__(self, image, x, y, scale, speed, max_HP, HP, max_dmg, ability):
-        self.formula = int(width * (scale / 1920))
+        self.formula = int(scale * width_scale)
         self.skin = pg.image.load(image)
         self.skin = pg.transform.scale(self.skin, (self.formula, self.formula))
         self.rect = self.skin.get_rect()
         self.rect.x = x
         self.rect.y = y
-        # self.speed = speed * (self.formula / 30)
-        self.speed = speed * (width / 1920)
+        self.speed = speed * width_scale
         self.ability = ability
 
     def show_char(self, screen):

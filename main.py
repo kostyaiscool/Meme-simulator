@@ -1,11 +1,10 @@
 import pygame as pg
 from character import Character
-from config import width, height, screen, stage
+from config import width, height, screen
 from menu import show_all_texts, operate_all_buttons, show_all_buttons
 from utilities import menu_falser
 
 clock = pg.time.Clock()
-menu = True
 
 
 def run():
@@ -14,7 +13,6 @@ def run():
     while game:
         screen.fill(color)
         menu = menu_falser()
-        print(menu)
         if not menu:
             squar.show_char(screen)
         show_all_texts()
