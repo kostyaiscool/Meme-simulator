@@ -1,0 +1,1 @@
+available_langs = ["ru", "uk", "en"]

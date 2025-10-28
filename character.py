@@ -4,7 +4,7 @@ from config import width, height
 
 class Character:
     def __init__(self, image, x, y, scale, speed, max_HP, HP, max_dmg, ability):
-        self.formula = width * (scale / 1920)
+        self.formula = int(width * (scale / 1920))
         self.skin = pg.image.load(image)
         self.skin = pg.transform.scale(self.skin, (self.formula, self.formula))
         self.rect = self.skin.get_rect()
@@ -13,8 +13,6 @@ class Character:
         # self.speed = speed * (self.formula / 30)
         self.speed = speed * (width / 1920)
         self.ability = ability
-        print(self.formula)
-        print(self.speed)
 
     def show_char(self, screen):
         screen.blit(self.skin, (self.rect.x, self.rect.y))
