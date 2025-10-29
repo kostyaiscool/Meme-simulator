@@ -50,7 +50,7 @@ class Button:
         if cfg.stage == self.menu_stage:
             surface.blit(self.skin, self.rect)
             pg.draw.rect(surface, (255, 255, 255), self.rect, int(3 * cfg.width_scale))
-            text = Text(self.text, self.x + 10, self.y, self.text_size, (255, 255, 255), "Comic Sans MS",
+            text = Text(self.text, self.x + 10, self.y + 5, self.text_size, (255, 255, 255), "Comic Sans MS",
                         self.menu_stage)
             text.draw(surface)
 
