@@ -19,17 +19,17 @@ def troll():
     print("Стену 1000 словами не пробъешь, но пробъешь кулаком. Не думай об этом просто иди в шахту")
 
 
-to_select_button = Button(texts["meme_select_" + cfg.used_lang], troll, 0, 500, 100, 50, 1, (0, 0, 0), 24)
-settings_button = Button(texts["settings_" + cfg.used_lang], troll, 1720, 0, 200, 50, 1, (0, 0, 0), 24)
+# to_select_button = Button(texts["meme_select_" + cfg.used_lang], troll, 0, 500, 100, 50, 1, (0, 0, 0), 24)
+# settings_button = Button(texts["settings_" + cfg.used_lang], troll, 1720, 0, 200, 50, 1, (0, 0, 0), 24)
 tutorial_button = Button(texts["starter_play_" + cfg.used_lang], play, 1745, 1030, 175, 50, 1, (0, 0, 0), 24)
 
 
 def show_all_buttons():
-    to_select_button.draw(cfg.screen)
-    settings_button.draw(cfg.screen)
+    # to_select_button.draw(cfg.screen)
+    # settings_button.draw(cfg.screen)
     tutorial_button.draw(cfg.screen)
 
 
 def operate_all_buttons(event):
-    to_select_button.operate(event)
+    # to_select_button.operate(event)
     tutorial_button.operate(event)

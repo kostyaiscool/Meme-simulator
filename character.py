@@ -5,7 +5,7 @@ from config import width, height, width_scale, height_scale
 
 
 class Character:
-    def __init__(self, image, x, y, speed, max_HP, max_dmg, ability):
+    def __init__(self, image, x, y, speed, max_hp, max_dmg, ability):
         self.formula = int(30 * width_scale)
         self.skin = pg.image.load(image)
         self.skin = pg.transform.scale(self.skin, (self.formula, self.formula))
@@ -14,6 +14,8 @@ class Character:
         self.rect.y = y
         self.speed = speed * width_scale
         self.ability = ability
+        self.hp = max_hp
+        self.max_hp = max_hp
 
     def show_char(self, screen):
         screen.blit(self.skin, (self.rect.x, self.rect.y))
@@ -29,7 +31,7 @@ class Character:
             self.rect.x += self.speed
 
 
-class Boss():
+class Boss:
     def __init__(self, image, speed, max_hp, x, y, ai):
         self.formula = int(60 * width_scale)
         self.skin = pg.image.load(image)
@@ -39,6 +41,8 @@ class Boss():
         self.rect.y = y * height_scale
         self.speed = speed * width_scale
         self.ai = ai
+        self.hp = max_hp
+        self.max_hp = max_hp
 
     def operate_ai(self):
         self.ai(char=self, speed=self.speed)
@@ -46,7 +50,3 @@ class Boss():
 
     def show_char(self, screen):
         screen.blit(self.skin, (self.rect.x, self.rect.y))
-
-    def test_ai(self):
-        self.rect.x += randint(0 - 4, 4)
-        self.rect.y += randint(0 - 4, 4)
