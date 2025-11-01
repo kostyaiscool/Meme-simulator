@@ -14,4 +14,12 @@ texts = {
     "demo_warn_ru": "!!!ЭТА ИГРА ЕЩЁ В ГЛУБОКОЙ РАЗРАБОТКЕ!!!",
     "demo_warn_uk": "!!!ЦЯ ГРА ЩЕ У ГЛИБОКІЙ РОЗРОБЦІ!!!",
     "demo_warn_en": "!!!THIS GAME IS STILL IN HEAVY DEVELOPMENT!!!",
+
+    "settings_ru": "Настройки",
+    "settings_uk": "Налаштування",
+    "settings_en": "Settings",
+
+    "starter_play_ru": "Обучение",
+    "starter_play_uk": "Навчання",
+    "starter_play_en": "Tutorial"
 }
