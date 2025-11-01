@@ -43,7 +43,7 @@ class ProjectileAttack():
                 self.rect = None
 
 
-test_attack = ProjectileAttack(29, 1900, 540, 50, "left", "Sources/squar.png", 10)
+test_attack = ProjectileAttack(5, 1900, 540, 50, "left", "Sources/squar.png", 10)
 attacks = [test_attack]
 
 
@@ -60,4 +60,4 @@ def operate_attacks(list, char, boss):
 def spawn_projectile():
     from random import randint
     y = randint(-1000, 1000)
-    attacks.append(ProjectileAttack(29, 1900, y, 50, "left", "Sources/squar.png", 10))
+    attacks.append(ProjectileAttack(5, 1900, y, 50, "left", "Sources/squar.png", 10))

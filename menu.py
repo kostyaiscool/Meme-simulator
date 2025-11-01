@@ -5,11 +5,17 @@ from Sources.Translation.lang import texts
 exit_text = Text(texts["exit_text_" + cfg.used_lang], 10, 10, 30, (255, 255, 255),
                  "Comic Sans MS", "DEMO")
 warning_text = Text(texts["demo_warn_" + cfg.used_lang], 650, 1020, 30, (255, 255, 255), "Comic Sans MS", 1)
+player_hp_text = Text("Типо хп игрока типо крутой", 650, 1020, 30, (255, 255, 255), "Comic Sans MS", 2)
+boss_hp_text = Text("А что мне писать то? ", 650, 0, 30, (255, 255, 255), "Comic Sans MS", 2)
+instructions_text = Text(texts["attack_instruction_" + cfg.used_lang], 650, 100, 30, (255, 255, 255), "Comic Sans MS", 2)
 
 
 def show_all_texts():
     exit_text.draw(cfg.screen)
     warning_text.draw(cfg.screen)
+    player_hp_text.draw(cfg.screen)
+    boss_hp_text.draw(cfg.screen)
+    instructions_text.draw(cfg.screen)
 
 def play():
     cfg.stage = 2

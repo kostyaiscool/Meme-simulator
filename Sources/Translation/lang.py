@@ -21,5 +21,9 @@ texts = {
 
     "starter_play_ru": "Обучение",
     "starter_play_uk": "Навчання",
-    "starter_play_en": "Tutorial"
+    "starter_play_en": "Tutorial",
+
+    "attack_instruction_ru": "Нажми на пробел, чтобы ударить",
+    "attack_instruction_uk": "Натисні на пробіл, щоби вдарити",
+    "attack_instruction_en": "Press space to attack"
 }

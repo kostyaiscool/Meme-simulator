@@ -10,12 +10,15 @@ class Character:
         self.skin = pg.image.load(image)
         self.skin = pg.transform.scale(self.skin, (self.formula, self.formula))
         self.rect = self.skin.get_rect()
+        self.x = x
+        self.y = y
         self.rect.x = x
         self.rect.y = y
         self.speed = speed * width_scale
         self.ability = ability
         self.hp = max_hp
         self.max_hp = max_hp
+        self.damage = max_dmg
 
     def show_char(self, screen):
         screen.blit(self.skin, (self.rect.x, self.rect.y))
@@ -30,6 +33,10 @@ class Character:
         elif dir == 'right' and self.rect.x < width - 30 * width_scale:
             self.rect.x += self.speed
 
+    def attack(self, boss):
+        if self.rect.colliderect(boss.rect):
+            boss.hp -= self.damage
+
 
 class Boss:
     def __init__(self, image, speed, max_hp, x, y, ai):
@@ -43,6 +50,8 @@ class Boss:
         self.ai = ai
         self.hp = max_hp
         self.max_hp = max_hp
+        self.x = x
+        self.y = y
 
     def operate_ai(self):
         self.ai(char=self, speed=self.speed)

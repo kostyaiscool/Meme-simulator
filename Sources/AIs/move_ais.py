@@ -35,8 +35,9 @@ def mild_ai(char, speed):
     elif vdir == 2 and char.rect.y < height - 60 * height_scale:
         char.rect.y += speed
 
+
 def standing_ai(char, speed):
     global timer
-    if get_time_passed(timer) >= 0.05:
+    if get_time_passed(timer) >= 0.2:
         spawn_projectile()
         timer = start_timer()
