@@ -52,10 +52,11 @@ class Boss:
         self.max_hp = max_hp
         self.x = x
         self.y = y
+        # self.surface = surface
+        # self.events = events
 
     def operate_ai(self):
         self.ai(char=self, speed=self.speed)
-        # self.test_ai()
 
     def show_char(self, screen):
         screen.blit(self.skin, (self.rect.x, self.rect.y))

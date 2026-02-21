@@ -1,15 +1,16 @@
+import time
 from functools import partial
 from random import randint
 
 import pygame as pg
 
+from AIs.finished_ais import ef_ai
 from AIs.move_ais import standing_ai
 from attack import ProjectileAttack, operate_attacks, attacks, show_attacks
 from character import Character, Boss
 from config import width, height, screen, width_scale, height_scale
 from menu import show_all_texts, operate_all_buttons, show_all_buttons
 from utilities import menu_falser, start_timer, get_time_passed, battle_ender, text_hp_update
-
 clock = pg.time.Clock()
 
 
@@ -49,12 +50,14 @@ def run():
                 if e.key == pg.K_ESCAPE:
                     game = False
                 if e.key == pg.K_SPACE:
-                    if get_time_passed(timer) >= 3:
+                    if time.time() - timer >= 3:
                         squar.attack(epic_face)
-                        timer = start_timer()
+                        timer = time.time()
+            if e.type == pg.QUIT:
+                game = False
 
 
 squar = Character('Sources/squar.png', width / 2, height / 2, 3, 30, 5, "None")
-epic_face = Boss("Sources/epic_face.png", 4, 100, 1080, 540, standing_ai)
-timer = start_timer()
+epic_face = Boss("Sources/epic_face.png", 4, 100, 1080, 540, ef_ai)
+timer = time.time()
 run()

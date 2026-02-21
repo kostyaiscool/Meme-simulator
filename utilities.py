@@ -1,3 +1,5 @@
+from typing import TYPE_CHECKING
+
 import config as cfg
 import time
 

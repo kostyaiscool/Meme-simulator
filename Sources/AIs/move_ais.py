@@ -37,7 +37,6 @@ def mild_ai(char, speed):
 
 
 def standing_ai(char, speed):
-    global timer
-    if get_time_passed(timer) >= 0.2:
-        spawn_projectile()
-        timer = start_timer()
+    pass
+    # For modders/viewers: This function will be finished the next year instead. standing_ai() full version coming 2027
+

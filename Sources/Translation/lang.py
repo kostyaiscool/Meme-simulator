@@ -25,5 +25,13 @@ texts = {
 
     "attack_instruction_ru": "Нажми на пробел, чтобы ударить",
     "attack_instruction_uk": "Натисні на пробіл, щоби вдарити",
-    "attack_instruction_en": "Press space to attack"
+    "attack_instruction_en": "Press space to attack",
+
+    "back_ru": "Назад",
+    "back_uk": "Назад",
+    "back_en": "Back",
+
+    "change_lang_ru": "Изменить язык",
+    "change_lang_uk": "Змінити мову",
+    "change_lang_en": "Change language"
 }
